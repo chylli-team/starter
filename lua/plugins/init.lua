@@ -35,4 +35,27 @@ return {
   -- 		},
   -- 	},
   -- },
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = {
+      git = { enable = true },
+    },
+  },
+  {
+    'smoka7/hop.nvim',
+    opts = {
+        multi_window = true,
+        keys = 'etovxqpdygfblzhckisuran',
+        uppercase_labels = true
+    },
+    keys = {
+      {
+         "<leader>fj",
+         function()
+           require("hop").hint_words()
+         end,
+         mode = {"n", "x", "o"},
+      },
+    },
+  },
 }
