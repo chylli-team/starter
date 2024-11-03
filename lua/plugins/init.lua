@@ -13,13 +13,33 @@ return {
     end,
   },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+   {
+   	"williamboman/mason.nvim",
+   	opts = {
+   		ensure_installed = {
+   			"lua-language-server", "stylua",
+   			"prettier", "perlnavigator"
+   		},
+   	},
+   },
+
+   {
+   	"nvim-treesitter/nvim-treesitter",
+   	opts = {
+   		ensure_installed = {
+   			"vim", "lua", "vimdoc", "perl"
+   		},
+   	},
+   },
+  {
+    "NvChad/nvcommunity",
+    { import = "nvcommunity.completion.copilot" },
+    opts = {
+      suggestion = {
+        keymap = {
+          accept = "<C-/>", 
+        }
+      }
+    }
+  },
 }
